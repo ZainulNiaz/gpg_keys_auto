@@ -16,9 +16,9 @@ else
 fi
 
 
-z=$(gpg --list-keys | grep -A1 "pub   rsa" )
-x=${z:58}
-echo "${x}"
+#z=$(gpg --list-keys | grep -A1 "pub   rsa" )
+#x=${z:58}
+#echo "${x}"
 git config --global commit.gpgsign true
 gpg --armor --export $x
 echo "Copy and paste this in github/settings/ssh and gpg keys/gpg keys"
